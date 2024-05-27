@@ -1,0 +1,12 @@
+.header{
+    background-color: var(--disagro-primary);
+    color: var(--disagro-text-primary-color);
+    height: 70px;
+    display: flex;
+    align-items: center;
+
+    &__wrapper{
+        margin-left: 10px;
+    }
+}
+

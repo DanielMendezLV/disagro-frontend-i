@@ -1,0 +1,48 @@
+
+<div class="contact">
+    <div class="contact__wrapper">
+        <app-step [stepNumber]="1" [stepInstruction]="'Ingrese su información'"></app-step>
+            <form [formGroup]="questionForm"  class="contact__form">
+            
+                <div class="contact__form_control">
+                    <h3>Nombre:</h3>
+                    <div class="contact__form_wrapper">
+                        <input class="contact__form_control_input" type="text"  placeholder="Nombre" formControlName="name">
+                    </div>
+                    <mat-error *ngIf="nameFormControl?.hasError('required')">Debe escribir su nombre</mat-error>
+                </div>
+                
+
+                <div class="contact__form_control">
+                    <h3>Apellidos:</h3>
+                    <div class="contact__form_wrapper">
+                        <input type="text"  class="contact__form_control_input" placeholder="Apellidos" formControlName="lastname">
+                       
+                    </div>
+                    <mat-error *ngIf="lastNameFormControl?.hasError('required')">Debe escribir sus apellidos</mat-error>
+                </div>
+
+
+                <div class="contact__form_control">
+                    <h3>Email:</h3>
+                    <div class="contact__form_wrapper">
+                        <input type="email"  class="contact__form_control_input" placeholder="Email" formControlName="email">
+                       
+                    </div>
+                    <mat-error *ngIf="emailFormControl?.hasError('required')">Debe ingresar su email</mat-error>
+                </div>
+
+                <div class="contact__form_control">
+                    <h3>Fecha y Hora:</h3>
+                    <div class="contact__form_wrapper">
+                        <input type="datetime-local" class="contact__form_control_input"   placeholder="Fecha y Hora" formControlName="date">
+                        
+                    </div>
+                    <mat-error *ngIf="dateAndHourFormControl?.hasError('required')">Debe ingresar la fecha</mat-error>
+                </div>
+           
+            </form>
+        
+    </div>
+</div>
+

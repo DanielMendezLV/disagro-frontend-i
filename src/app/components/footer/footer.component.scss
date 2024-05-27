@@ -1,0 +1,15 @@
+.footer{
+    background-color: var(--disagro-primary);
+    color: var(--disagro-text-primary-color);
+    height: 40px;
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
+    margin-top: 18px;
+    position: relative;
+    bottom: 0;
+    
+    &__text{
+        padding-right: 50px;
+    }
+}

@@ -1,0 +1,42 @@
+html, body { height: 100%; background-color: var(--disagro-background-color); }
+body { 
+    margin: 0; 
+    font-family: Questrial, "Helvetica Neue", sans-serif; 
+    min-height: 100vh; 
+    display: flex;
+    flex-direction: column;
+}
+
+.root_styles{
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+p, h1, h2, h3, h4 {
+    margin: 0 !important;
+}
+
+th {
+    cursor: pointer;
+}
+
+ol, ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+button {
+    outline: none;
+    cursor: pointer;
+    border: none;
+}
+
+.mat-form-field-label{
+    // font-size: 1.5rem !important;
+    font-weight: bold !important;
+    color: #000 !important;
+}
+
+    

@@ -1,0 +1,47 @@
+
+<div class="products">
+    <div class="products__wrapper">
+
+        <app-step [stepNumber]="2" [stepInstruction]="'Seleccione Servicios y Productos de su interés'"></app-step>
+    
+        <div class="products__form">
+            <div class="search_bar">
+                <div class="search_bar__form_control">
+                    <div class="search_bar__form_wrapper">
+                        <input class="search_bar__form_control_input" type="text"  placeholder="Buscar Servicios y Productos" formControlName="name"  (input)="onSearch($event)">
+                    </div>
+                </div>
+            </div>
+        
+            <div class="products__header">
+                <p>Servicios y/o Productos <br> seleccionados : </p>
+            </div>
+        
+            <form [formGroup]="productForm">
+                <div formArrayName="selectedProducts" class="products__list">
+                  <div *ngFor="let product of products; let i = index" class="product">
+                      <span class="product__name">
+                        <input type="checkbox" [formControlName]="i" (change)="onCheckboxChange($event, product)" class="product__checkbox">
+                        {{ product.name }}
+                       </span>
+                      <span class="product__price">Q{{ product.price.toFixed(2) }}</span>
+                  </div>
+                </div>
+            </form>
+    
+            <div class="discounts">
+                <div class="discounts__container">
+                    <div class="discounts__section">
+                        <p>Descuento obtenido <br>en Servicios</p>
+                        <p class="discounts__discount">{{discountServices}}%</p>
+                    </div>
+                    <div class="discounts__divider"></div>
+                    <div class="discounts__section">
+                        <p>Descuento obtenido <br>en Productos</p>
+                        <p class="discounts__discount">{{discountProducts}}%</p>
+                    </div>
+                </div> 
+            </div>
+        </div>
+    </div>
+</div>

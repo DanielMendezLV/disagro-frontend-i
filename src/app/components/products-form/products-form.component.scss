@@ -1,0 +1,133 @@
+
+.products{
+
+    width: 400px;
+    height: 550px;
+
+    
+    &__wrapper{
+        padding: 20px;
+    }
+
+
+    &__form{
+        background-color: var(--disagro-background-form-color);
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        margin-top: 20px;
+        border-radius: 5%;
+        height: 462px;
+        overflow: hidden;
+    }
+
+
+    &__header{
+        text-align: center;
+        font-weight: bold;
+    }
+
+    &__list{
+        overflow-y: auto;
+        max-height: 200px;
+        
+    }
+}
+
+.product{
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px 10px 30px;
+    border-color: #D4D4D4;
+    border-width: 0.2px;
+    border-style: none none solid none;
+    
+    &__price{
+        margin-left: 10px;
+        white-space: nowrap;
+        font-weight: bold;
+      
+    }
+
+    &__checkbox{
+        margin-right: 10px;
+    }
+}
+
+.search_bar{
+    height: 90px;
+    background-color: var(--disagro-primary);
+    display: flex;
+    align-items: center;
+    
+
+    &__form_control{
+        width: 100%;
+        padding: 30px;
+    }
+
+    &__form_control_input{
+        width: 100% !important;
+        height: 20px;
+        padding-left: 10px;
+        border: none;
+        outline: none;
+        background-color: var(--disagro-background-form-color);
+    }
+    
+    &__form_wrapper{
+        margin-top: 10px;
+        border-style: solid;
+        border-color: grey;
+        border-width: 2px;
+        border-style: solid;
+        border-radius: 20px;
+        padding: 5px;
+        background-color: var(--disagro-background-form-color);
+    }
+    
+}
+
+.discounts{
+    background-color: var(--disagro-primary);
+    align-items: center;
+    color: var(--disagro-text-primary-color);
+    text-align: center;
+
+    &__discount{
+        color: var(--disagro-secondary);
+        font-size: 1rem;
+    }
+
+
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        border: 1px solid #ccc;
+        padding: 10px;
+        position: relative;
+    }
+
+    &__section {
+        flex: 1;
+        padding: 0 20px;
+        font-size: 0.7rem;
+    }
+
+      
+    &__divider {
+        width: 1px;
+        background-color: #fff;
+        position: absolute;
+        top: 20%;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        height: 40px;
+    }
+    
+    
+}

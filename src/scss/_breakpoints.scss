@@ -1,0 +1,27 @@
+$breakpoints-up: (
+  // 700 px - 1 em = 16px,
+  "medium": 43.75rem,
+  // 900 px,
+  "large": 56.25em,
+  // 1440px,,,,,,
+  "xlarge": 90em
+);
+
+// 699.98px, 899.98px, 1439.98px , these are for not overlap, this is used by bootstrap
+$breakpoints-down: (
+  "small": 43.74875em,
+  "medium": 56.24875em,
+  "large": 89.99875em,
+);
+
+@mixin breakpoint-up($size) {
+  @media (min-width: map-get($breakpoints-up, $size)) {
+    @content;
+  }
+}
+
+@mixin breakpoint-down($size) {
+  @media (max-width: map-get($breakpoints-down, $size)) {
+    @content;
+  }
+}

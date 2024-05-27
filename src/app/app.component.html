@@ -1,0 +1,24 @@
+<div class="content">
+
+
+  <app-header></app-header>
+
+  <div class="layout">
+    <app-contact-form [questionForm]="questionForm"></app-contact-form>
+    <div *ngIf="products.length > 0">
+      <app-products-form [productForm]="productsForm" [products]="products" [defaultProducts]="products" [selectedProducts]="selecteProducts"  (discountProduct)="onSaveDiscountProduct($event)"  (discountService)="onSaveDiscountService($event)" ></app-products-form>
+    </div>
+  </div>
+  
+  <div class="confirm">
+    <div class="confirm__form">
+      <div class="confirm__wrapper">
+        <button (click)="onSubmit()" class="confirm__button"  type="button">CONFIRMAR ASISTENCIA</button>
+      </div>
+    </div>
+   
+  </div>
+  
+  
+</div>
+<app-footer></app-footer>

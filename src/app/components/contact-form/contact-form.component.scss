@@ -1,0 +1,43 @@
+.contact{
+   
+    width: 400px;
+    height: 550px;
+
+    &__wrapper{
+        padding: 20px;
+    }
+
+    &__form{
+        background-color: var(--disagro-background-form-color);
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        margin-top: 20px;
+        padding: 10px;
+        padding-top: 20px;
+        border-radius: 5%;
+        height: 462px;
+    }
+
+    &__form_control_input{
+        width: 100% !important;
+        height: 20px;
+        padding-left: 10px;
+        border: none;
+        outline: none;
+    }
+
+    &__form_wrapper{
+        margin-top: 10px;
+        border-style: solid;
+        border-color: grey;
+        border-width: 2px;
+        border-style: solid;
+        border-radius: 20px;
+        padding: 5px;
+    }
+    
+
+}
+
+
